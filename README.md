@@ -1,2 +1,2 @@
-# S-lection-repr-sentative-d-images-pour-l-apprentissage-supervis-
+# Selection-representative-d'images-pour-l'apprentissage-supervisé
 une approche basée sur la dissimilarité

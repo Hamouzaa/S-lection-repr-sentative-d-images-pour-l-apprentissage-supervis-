@@ -203,7 +203,7 @@ db_path = r"C:
 
 features = np.load(features_path)
 
-image_directory = r"C:\Users\Thomas\PycharmProjects\pythonProject3\20220420_glanum_mmn"
+image_directory = r"C:\Users\Hamza\PycharmProjects\pythonProject3\20220420_glanum_mmn"
 image_files = [os.path.basename(x) for x in sorted(glob.glob(os.path.join(image_directory, '*.jpg')))]
 
 feature_dict = {name: features[i] for i, name in enumerate(image_files)}
@@ -316,7 +316,7 @@ dense5 = Dense(8)(dense4)
 output = Dense(1)(dense5)
 model = Model(inputs=[input1, input2], outputs=output)
 model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mean_squared_error'])
-data = np.load(r"C:\Users\Thomas\PycharmProjects\pythonProject3\dossier_pas\structured_features_data.npy", allow_pickle=True)
+data = np.load(r"C:\Users\Hamza\PycharmProjects\pythonProject3\dossier_pas\structured_features_data.npy", allow_pickle=True)
 features1, features2, labels = np.stack(data['features1']), np.stack(data['features2']), data['dis_mag']
 train_size = int(0.8 * len(labels))
 input_data_train, labels_train = [features1[:train_size], features2[:train_size]], labels[:train_size]
@@ -337,7 +337,7 @@ model_path = r"
 model = tf.keras.models.load_model(model_path)
 print("Model loaded successfully.")
 
-data_path = r"C:\Users\Thomas\PycharmProjects\pythonProject2\all_features.npy"
+data_path = r"C:\Users\Hamza\PycharmProjects\pythonProject2\all_features.npy"
 features = np.load(data_path)
 
 print("Shape of loaded feature data:", features.shape)
